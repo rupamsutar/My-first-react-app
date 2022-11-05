@@ -1,5 +1,6 @@
+import React from "react";
+
 import Expenses from "./components/Expenses";
-import Card from "./components/Card"
 
 function App() {
 
@@ -29,15 +30,26 @@ function App() {
     }
   ];
 
-  return (
-    <div>
-      <h2>Let's get started!</h2>
-      <p>I am literally starting to REACT !</p>
-      
-      <Expenses items = {expenses} />
 
-    </div>
-  );
+  return React.createElement(
+    "div", 
+    {},
+    React.createElement("h2", {}, "Lets get Started !"),
+    React.createElement("p", {}, "I am literally starting to learn React ❤️"),
+    React.createElement(Expenses, {items : expenses},)     
+    );
+    
+
+
+
+
+  // return (
+  //   <div>
+  //     <h2>Let's get started!</h2>
+  //     <p>I am literally starting to REACT !</p>      
+  //     <Expenses items = {expenses} />
+  //   </div>
+  // );
 }
 
 export default App;
