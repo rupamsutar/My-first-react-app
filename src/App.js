@@ -1,5 +1,5 @@
 import React from "react";
-
+import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expenses";
 
 function App() {
@@ -34,8 +34,7 @@ function App() {
   return React.createElement(
     "div", 
     {},
-    React.createElement("h2", {}, "Lets get Started !"),
-    React.createElement("p", {}, "I am literally starting to learn React ❤️"),
+    React.createElement(NewExpense, {}),
     React.createElement(Expenses, {items : expenses},)     
     );
     
