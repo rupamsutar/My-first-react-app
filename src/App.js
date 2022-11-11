@@ -38,9 +38,9 @@ function App() {
 
   return React.createElement(
     "div", 
-    {},
+    {},    
     React.createElement(NewExpense, {onAddExpense: addExpenseHandler}),
-    React.createElement(Expenses, {items : expenses},)     
+    React.createElement(Expenses, {items : expenses},)       
     );
     
 
