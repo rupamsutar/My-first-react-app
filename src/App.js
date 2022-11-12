@@ -35,25 +35,17 @@ function App() {
     console.log(expense);
   }
 
+  return <div>
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses items={expenses} />
+    </div>
 
-  return React.createElement(
-    "div", 
-    {},    
-    React.createElement(NewExpense, {onAddExpense: addExpenseHandler}),
-    React.createElement(Expenses, {items : expenses},)       
-    );
-    
-
-
-
-
-  // return (
-  //   <div>
-  //     <h2>Let's get started!</h2>
-  //     <p>I am literally starting to REACT !</p>      
-  //     <Expenses items = {expenses} />
-  //   </div>
-  // );
+  // return React.createElement(
+  //   "div", 
+  //   {},    
+  //   React.createElement(NewExpense, {onAddExpense: addExpenseHandler}),
+  //   React.createElement(Expenses, {items : expenses},)       
+  //   );          
 }
 
 export default App;
