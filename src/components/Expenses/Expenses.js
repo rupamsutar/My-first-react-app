@@ -14,19 +14,25 @@ function Expenses(props) {
     setToFilterYear(props.items.filter(x => x.date.toLocaleString("en-US", {year: "numeric"}) === dateChange.toString()))
   };
 
-  let 
+  let expenseContent = <p>No Expense Found</p>
 
-
-  return <Card className="expenses">
-      <ExpenseFilter selecterYear={filteredYear} onFilterChange={filterChangeHandler} />
-      {toFilterYear.map((expense) => 
+  if (toFilterYear.length > 0) {
+      expenseContent = toFilterYear.map((expense) => 
         <ExpenseItem
           key={expense.id} 
           title={expense.title} 
           amount={expense.amount} 
           date={expense.date} 
-        />)
-      }
+        />
+      );    
+  }
+
+
+  return <Card className="expenses">
+      <ExpenseFilter selecterYear={filteredYear} onFilterChange={filterChangeHandler} />
+      {expenseContent};  
+        
+      
 {/*       
       <ExpenseItem 
       title={props.items[0].title} 
