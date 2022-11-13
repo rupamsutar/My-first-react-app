@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; 
 import "./ExpenseFilter.css";
 
 function ExpenseFilter(props) {
@@ -6,6 +6,8 @@ function ExpenseFilter(props) {
     const dropdownChangeHandler = (event) => {
         props.onFilterChange(event.target.value);
     }
+
+    console.log(props.selectedYear);
 
     return (
         <div className='expenses-filter'>
