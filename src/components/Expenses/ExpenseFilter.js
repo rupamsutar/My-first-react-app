@@ -7,7 +7,6 @@ function ExpenseFilter(props) {
         props.onFilterChange(event.target.value);
     }
 
-    console.log(props.selectedYear);
 
     return (
         <div className='expenses-filter'>
